@@ -13,7 +13,7 @@ $ git clone git@github.com:JustSteveKing/go-api.git
 ```
 
 ```bash
-$ cd gi-api
+$ cd go-api
 ```
 
 ## Running
