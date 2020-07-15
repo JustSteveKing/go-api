@@ -1,0 +1,17 @@
+version: "3"
+
+networks: 
+  juststeveking:
+
+services:
+  go-docker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: go_docker_api
+    networks:
+      - juststeveking
+    ports:
+      - "8080:8080"
+    volumes: 
+      - ./:/app

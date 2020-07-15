@@ -1,0 +1,49 @@
+openapi: 3.0.0
+info:
+  title: Go API Example
+  version: '1.0'
+  contact:
+    name: Steve McDougall
+    url: 'https://www.juststeveking.uk'
+    email: juststevemcd@gmail.com
+  description: A simple Go Lang API example built for education purposes.
+servers:
+  - url: 'http://localhost:8080'
+    description: Docker
+paths:
+  /ping:
+    get:
+      summary: Ping Service
+      tags: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                default: application/vnd.api+json
+              description: The Response content type should be application/vnd.api+json
+              required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ping-Message'
+      operationId: get-ping
+      description: 'A simple endpoint to ensure the API is online and working as expected, will return a message stating that the service is online.'
+      parameters: []
+    parameters: []
+components:
+  schemas:
+    Ping-Message:
+      title: Ping-Message
+      type: object
+      properties:
+        message:
+          type: string
+          description: A simple online and working message from the API
+      required:
+        - message
+      x-examples:
+        Service Online:
+          message: Service Online
