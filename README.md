@@ -2,7 +2,7 @@
 
 A simple Go API following concepts of Domain Driven Design for educational purposes.
 
-Open API specification can be found [here](docs/references/openapi.v1.yaml)
+Open API specification can be found [here](docs/reference/openapi.v1.yaml)
 
 ## Installation
 
